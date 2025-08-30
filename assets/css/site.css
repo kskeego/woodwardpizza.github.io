@@ -1,0 +1,68 @@
+/* Minimal, accessible styles */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --brand: #0f6; /* placeholder brand color; ensure contrast */
+  --accent: #0057ff;
+  --border: #e2e8f0;
+  --focus: #111111; /* high-contrast focus outline */
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+  font-size: 18px;
+}
+a { color: var(--accent); }
+a:focus, button:focus, [role="button"]:focus, summary:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+header {
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: var(--bg); z-index: 10;
+}
+.container { max-width: 1100px; padding: 0 16px; margin: 0 auto; }
+.skip-link {
+  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: static; width: auto; height: auto; padding: 8px 12px; background: #ff0; color: #000; display: inline-block;
+}
+.navbar {
+  display: flex; align-items: center; gap: 24px; padding: 12px 0;
+}
+.navbar a.logo { font-weight: 800; font-size: 1.15rem; letter-spacing: 0.2px; text-decoration: none; color: var(--text); }
+.navbar nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.navbar nav a { display: block; padding: 8px 12px; border-radius: 10px; text-decoration: none; color: var(--text); }
+.navbar nav a[aria-current="page"] { background: #f4f6f8; }
+main { padding: 24px 0 48px; }
+footer {
+  border-top: 1px solid var(--border); color: var(--muted); padding: 24px 0; font-size: 0.95rem;
+}
+/* FAQ accordion (native <details>) */
+.faq { display: grid; gap: 8px; }
+details.faq-item {
+  border: 1px solid var(--border); border-radius: 12px; padding: 0 12px; background: #fff;
+}
+details.faq-item > summary {
+  cursor: pointer; padding: 14px 6px; font-weight: 600; list-style: none;
+}
+details.faq-item[open] > summary { border-bottom: 1px solid var(--border); }
+details.faq-item .answer { padding: 12px 6px 16px; }
+@media (prefers-reduced-motion: no-preference) {
+  details.faq-item[open] .answer { animation: fadeIn 180ms ease-in; }
+  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+}
+/* Typography */
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 1.25rem; margin-top: 24px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px 24px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }

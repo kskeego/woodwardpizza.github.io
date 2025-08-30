@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detroit‑Style Pizza: The Origin • Woodward Pizza</title>
+  <meta name="description" content="How Detroit’s auto industry shaped the pan, the crust, and the tradition of Detroit‑style pizza." />
+  <link rel="canonical" href="https://kskeego.github.io/origin.html" />
+  <meta property="og:title" content="Detroit‑Style Pizza: The Origin • Woodward Pizza" />
+  <meta property="og:description" content="How Detroit’s auto industry shaped the pan, the crust, and the tradition of Detroit‑style pizza." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kskeego.github.io/origin.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Woodward Pizza",
+  "servesCuisine": [
+    "Pizza",
+    "Detroit-style"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Edmond",
+    "addressRegion": "OK",
+    "addressCountry": "US"
+  },
+  "url": "https://kskeego.github.io/origin.html"
+}
+</script>
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" tabindex="-1" class="container">
+
+  <h1>The Origin of Detroit-Style Pizza</h1>
+  <article aria-label="Origin of Detroit‑Style Pizza">
+    <p>Detroit-style pizza was born in 1946 at a neighborhood tavern called Buddy’s Rendezvous on Detroit’s east side. Owners Gus and Anna Guerra, with help from their Sicilian employee Connie Piccinato, baked the very first pie in a blue steel pan originally used for auto parts. That simple decision—using what Detroit had in abundance from the auto industry—sparked a new American pizza tradition.</p>
+
+    <h2>A Pizza Shaped by Detroit’s Auto Industry</h2>
+    <p>Detroit was the Motor City, and auto factories produced everything—including the sturdy blue steel pans that became the backbone of this style. Those pans gave Detroit-style pizza its:</p>
+    <ul>
+      <li>Rectangular shape</li>
+      <li>Crispy, caramelized edges (frico)</li>
+      <li>Even heat conduction for a crisp bottom and chewy center</li>
+    </ul>
+    <p>That “make-do” ingenuity is part of why Detroit-style pizza is considered one of America’s true regional pizza traditions.</p>
+
+    <h2>The Classic Formula</h2>
+    <p>From the start, a Detroit-style pizza was defined by:</p>
+    <ul>
+      <li>Cheese spread to the edge, creating the caramelized crust.</li>
+      <li>Sauce on top after baking, usually in two or three racing stripes (“red top”).</li>
+      <li>A dough that was light and airy inside but crunchy outside thanks to the steel pan.</li>
+    </ul>
+    <p>And even though the pans are rectangular, in Detroit we’ve always called it a “square pizza.” If you grew up in Michigan, you didn’t say “let’s get a pie”—you said, “let’s grab a square.”</p>
+
+    <h2>From Buddy’s to a National Trend</h2>
+    <p>For decades, Detroit-style pizza remained a local secret. It was beloved in neighborhoods across metro Detroit, but relatively unknown outside Michigan. That began to change after the 2008 financial crisis, when many Detroit natives left the city and the auto industry in search of new opportunities across the United States. Wherever they landed, they couldn’t find the pizza they grew up eating—so they began making it themselves or urging local restaurants to try. This migration played a huge role in spreading Detroit-style pizza nationwide and putting it on the map alongside New York and Chicago.</p>
+
+    <h2>Bringing Detroit-Style to Edmond, Oklahoma</h2>
+    <p>Our owner, Kyle, is one of those Detroit natives. After leaving Michigan, he wanted to share the comfort food he grew up with—the square pies baked in steel pans, with caramelized edges and sauce on top. Woodward Pizza is his way of bringing a piece of Detroit’s history to Edmond and the OKC metro. Here, we honor the tradition while creating new favorites for Oklahoma, with pizzas like the Trippple XXXtra Pepperoni, the Spicy Hawaiian, and rotating seasonal specials. Whether you’re from Detroit or just discovering this style for the first time, we bake every pizza with the same passion and pride.</p>
+
+    <h2>Why It Matters</h2>
+    <p>Detroit-style pizza represents more than flavor—it’s about resourcefulness, resilience, and community. Born in a working-class city, tied to its auto industry, and carried across the country during hard times, it has become a national favorite. Serving it in Edmond connects our guests not only to a great meal but also to a story of perseverance and tradition.</p>
+
+    <h2>FAQs About Detroit-Style Pizza</h2>
+    <p>Who invented Detroit-style pizza? Gus and Anna Guerra, owners of Buddy’s Rendezvous in 1946, are credited with creating the first Detroit-style pizza, with help from their cook Connie Piccinato.</p>
+    <p>Why are the pans important? They were originally auto parts trays—heavy steel that created the crisp bottom and caramelized edges.</p>
+    <p>Why do Detroiters call it a square when it’s rectangular? It’s just local slang. For generations, ordering Detroit-style pizza meant ordering a “square,” even though the pans are rectangular.</p>
+    <p>What makes it different from Chicago deep dish? Detroit-style is lighter, with a taller, airy crust and caramelized cheese edges. Chicago deep dish is heavier, more like a pie, with cheese layered beneath a thick layer of sauce.</p>
+
+    <h2>Closing CTA</h2>
+    <p>Want to experience the history? Try a square from our oven. At Woodward Pizza in downtown Edmond, we serve Detroit-style pizza true to its roots, paired with craft cocktails, fresh gelato, and a community vibe. Order Online or join us on the patio tonight.</p>
+  </article>
+
+</main>
+<footer id="site-footer"></footer>
+<script>
+(function() {
+  try {
+    fetch('/index.html', {cache:'no-store'}).then(function(r){return r.text()}).then(function(txt){
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(txt, 'text/html');
+
+      // Bring over stylesheet links
+      var existingHrefs = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(function(l){return l.href});
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach(function(link){
+        if (!existingHrefs.includes(link.href)) {
+          document.head.appendChild(link.cloneNode(true));
+        }
+      });
+      // Copy inline <style> tags if any
+      doc.querySelectorAll('style').forEach(function(styleTag){
+        if (styleTag.textContent && styleTag.textContent.trim().length > 0) {
+          document.head.appendChild(styleTag.cloneNode(true));
+        }
+      });
+      // Copy theme-related attributes
+      var srcHTML = doc.documentElement;
+      var dstHTML = document.documentElement;
+      ['data-theme','class'].forEach(function(attr){
+        var v = srcHTML.getAttribute(attr);
+        if (v && !dstHTML.getAttribute(attr)) { dstHTML.setAttribute(attr, v); }
+      });
+      // Clone header/footer
+      var srcHeader = doc.querySelector('header');
+      var dstHeader = document.getElementById('site-header');
+      if (srcHeader && dstHeader) dstHeader.replaceWith(srcHeader.cloneNode(true));
+      var srcFooter = doc.querySelector('footer');
+      var dstFooter = document.getElementById('site-footer');
+      if (srcFooter && dstFooter) dstFooter.replaceWith(srcFooter.cloneNode(true));
+    }).catch(function(e){ console.warn('Style/header clone failed:', e); });
+  } catch (e) { console.warn('Init failed:', e); }
+})();
+</script>
+</body>
+</html>

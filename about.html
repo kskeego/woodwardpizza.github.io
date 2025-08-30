@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Woodward Pizza</title>
+  <meta name="description" content="From Detroit roots to Edmond — our story and why we serve authentic Detroit‑style pizza." />
+  <link rel="canonical" href="https://kskeego.github.io/about.html" />
+  <meta property="og:title" content="About • Woodward Pizza" />
+  <meta property="og:description" content="From Detroit roots to Edmond — our story and why we serve authentic Detroit‑style pizza." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kskeego.github.io/about.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Woodward Pizza",
+  "servesCuisine": [
+    "Pizza",
+    "Detroit-style"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Edmond",
+    "addressRegion": "OK",
+    "addressCountry": "US"
+  },
+  "url": "https://kskeego.github.io/about.html"
+}
+</script>
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" tabindex="-1" class="container">
+
+  <h1>About Woodward Pizza From Detroit Roots to Edmond</h1>
+  <article aria-label="About Woodward Pizza">
+    <p>I was born and raised in metro Detroit and lived all over the tri-county area. Like many Detroiters, I grew up on square pizza—crispy-edged, pan-baked, with that unforgettable caramelized frico. I started making pizza in 2002 while working at local pizzerias, and even as I moved around for school and work, I never stopped experimenting with dough, sauce, and toppings.</p>
+    <p>After earning my engineering degree, I spent several years in the auto industry, working in Detroit, Canada, and St. Louis. (Side note: St. Louis-style pizza is the worst style of pizza I’ve ever eaten—hot garbage compared to Detroit’s square pies.) When the Great Recession hit, I left Detroit and the auto industry to work in the energy sector, which took me to West Virginia, Tulsa, Pittsburgh, Denver, Houston, and eventually Oklahoma City. In all of those places, I could never find the pizza I grew up with. At best, I’d come across Sicilian slices, but they were always missing that signature caramelized edge.</p>
+
+    <h2>Family in Edmond</h2>
+    <p>My wife Danielle and I met in Denver, and we moved to Edmond in 2014. Over the years we searched high and low for pizza we truly loved, but nothing ever hit the mark. During the slowdown in oil and gas in 2015, I almost opened a pizzeria instead of going back to school—but I earned my MBA at the University of Oklahoma on scholarship, tucking the dream away for later. Fast forward a few years, and fate stepped in. Our longtime friend Keith, a fellow Michigander, stopped through Edmond while moving back home. Over brunch, we started talking about how much we missed Detroit-style pizza and how I still dreamed of opening a pizzeria. A few months later Keith called me and said, “I’m tired of working for someone else. Let’s open the pizzeria.” My answer was simple: “Let’s do it.” We sold our home, cashed in my retirement, and dove in.</p>
+
+    <h2>Testing, Tasting, Perfecting</h2>
+    <p>For the next two years, I worked full-time in energy while perfecting dough and sauce recipes at home. During COVID, I had more time to focus, running endless A/B tests and feeding neighbors every weekend. Some nights we baked over 50 pizzas just to gather feedback. Danielle and our daughter greeted neighbors in the yard while I stayed busy in the kitchen, and our newborn son tagged along as the honorary mascot. I spent countless weekends testing different flours, tomatoes, cheeses, and bake times, always looking for the right balance of flavor and texture. Keith would fly in occasionally to help cook and prep during the larger test runs, so we could feed whole groups of neighbors and gather even more feedback.</p>
+
+    <h2>A Community Pizza Home</h2>
+    <p>Through a connection at OU, I met the developer of the Icehouse Project, and the location immediately felt right: family-friendly, close to home, and surrounded by other local businesses with the same community spirit. We wanted a place where families could relax, kids could run around, and neighbors could come together—just like I remembered growing up in Detroit.</p>
+    <p>In March 2022, we opened Woodward Pizza with incredible support from the same neighbors who helped us test recipes along the way. Today, we’re still family-owned and operated, and you’ll often find Danielle and me in the restaurant. Our daughter and son jump in to help whenever school is out—it truly is a family affair.</p>
+
+    <h2>Why We Do It</h2>
+    <p>For us, pizza isn’t just food—it’s tradition, family, and connection. It’s the square pizzas I grew up on in Detroit, re-created and perfected here in Edmond. It’s the joy of seeing neighbors come together on the patio. And it’s our chance to give Oklahoma a true taste of Detroit-style pizza, baked in steel pans and served with pride.</p>
+  </article>
+
+</main>
+<footer id="site-footer"></footer>
+<script>
+(function() {
+  try {
+    fetch('/index.html', {cache:'no-store'}).then(function(r){return r.text()}).then(function(txt){
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(txt, 'text/html');
+
+      // Bring over stylesheet links
+      var existingHrefs = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(function(l){return l.href});
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach(function(link){
+        if (!existingHrefs.includes(link.href)) {
+          document.head.appendChild(link.cloneNode(true));
+        }
+      });
+      // Copy inline <style> tags if any
+      doc.querySelectorAll('style').forEach(function(styleTag){
+        if (styleTag.textContent && styleTag.textContent.trim().length > 0) {
+          document.head.appendChild(styleTag.cloneNode(true));
+        }
+      });
+      // Copy theme-related attributes
+      var srcHTML = doc.documentElement;
+      var dstHTML = document.documentElement;
+      ['data-theme','class'].forEach(function(attr){
+        var v = srcHTML.getAttribute(attr);
+        if (v && !dstHTML.getAttribute(attr)) { dstHTML.setAttribute(attr, v); }
+      });
+      // Clone header/footer
+      var srcHeader = doc.querySelector('header');
+      var dstHeader = document.getElementById('site-header');
+      if (srcHeader && dstHeader) dstHeader.replaceWith(srcHeader.cloneNode(true));
+      var srcFooter = doc.querySelector('footer');
+      var dstFooter = document.getElementById('site-footer');
+      if (srcFooter && dstFooter) dstFooter.replaceWith(srcFooter.cloneNode(true));
+    }).catch(function(e){ console.warn('Style/header clone failed:', e); });
+  } catch (e) { console.warn('Init failed:', e); }
+})();
+</script>
+</body>
+</html>
