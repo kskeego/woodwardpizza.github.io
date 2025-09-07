@@ -1,0 +1,10 @@
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright 2025 The respective font authors.
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software,
+to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of
+the Font Software, subject to the following conditions:
+- The Font Software may not be sold by itself.
+- Original or modified versions of the Font Software may be bundled with any software, provided it is not
+  sold by itself.
+- The font names are reserved; if you substantially modify the font, you must change the font name(s).
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
