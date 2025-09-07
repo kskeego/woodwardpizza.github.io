@@ -82,6 +82,37 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
   header #site-menu.open, header .nav .nav-links.open{display:flex !important}
 }
 [hidden]{display:none !important}
+</style><style>
+/* Hard override: single-source hero image + centered content */
+.hero, .hero::before, .hero::after {
+  background: none !important;
+  background-image: none !important;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 62vh;
+  display: block !important; /* defeat stray flex/grid */
+}
+
+.hero__media { position: absolute; inset: 0; z-index: 0; }
+.hero__media picture,
+.hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.hero__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(10,11,14,.55), rgba(10,11,14,.75));
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative; z-index: 2;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 { line-height: 1.1; }
 </style></head><body><a class="skip-link" href="#main">Skip to main content</a><div aria-label="Quick order bar" class="orderbar" id="order-now-bar" role="region"><div class="inner"><strong>Hungry?</strong><a aria-label="Order Woodward Pizza now" class="btn" href="https://order.toasttab.com/online/woodwardpizza?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=order_online" rel="noopener" target="_blank">Order Now</a></div></div><header class="site-header" role="banner">
 <div class="container nav">
 <a class="logo" href="/"><picture><source srcset="/assets/logo.png.webp" type="image/webp"/><img alt="Woodward Pizza logo" decoding="async" fetchpriority="high" height="60" src="/assets/logo.png" width="220"/></picture></a>
