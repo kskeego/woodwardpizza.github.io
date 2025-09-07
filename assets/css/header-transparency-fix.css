@@ -1,0 +1,3 @@
+/* assets/css/header-transparency-fix.css */
+.header, .site-header, nav.site-nav, header[role="banner"] { background-color: rgba(0,0,0,0.60); }
+.site-logo, header img.logo, img[alt*="logo" i] { opacity: 1 !important; mix-blend-mode: normal !important; filter: none !important; }

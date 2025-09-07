@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+# Block crawlers from the table selection page
+Disallow: /table-selector.html
+Disallow: /table-locator.html
+Disallow: /table-locator
+
+Sitemap: https://woodwardpizza.com/sitemap.xml
