@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><link as_="image" fetchpriority="high" href="/assets/hero-768w.webp" imagesizes="100vw" imagesrcset="/assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w" media="(max-width: 900px)" rel="preload"/><link as_="image" fetchpriority="high" href="/assets/hero-1440w.webp" imagesizes="100vw" imagesrcset="/assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" media="(min-width: 901px)" rel="preload"/><style>
+<html lang="en"><head><style>
 /* === Minimal critical paint === */
 :root { --bg:#0b0b0c; --text:#f4f4f5; --panel:#121214; }
 *{box-sizing:border-box} html,body{height:100%}
@@ -101,7 +101,13 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 </nav>
 </div>
 </header>
-<div class="hero"><div class="container">
+<div class="hero"><div aria-hidden="true" class="hero__media">
+<picture>
+<source sizes="100vw" srcset="/assets/hero-768w.avif 768w, /assets/hero-1024w.avif 1024w, /assets/hero-1440w.avif 1440w, /assets/hero-1920w.avif 1920w" type="image/avif"/>
+<source sizes="100vw" srcset="/assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" type="image/webp"/>
+<img alt="" decoding="async" fetchpriority="high" height="900" sizes="100vw" src="/assets/hero-1024w.jpg" srcset="/assets/hero-768w.jpg 768w, /assets/hero-1024w.jpg 1024w, /assets/hero-1440w.jpg 1440w, /assets/hero-1920w.jpg 1920w" width="1920"/>
+</picture>
+<div class="hero__overlay"></div></div><div class="container">
 <span class="kicker">Edmond • OKC Metro • Icehouse Project</span>
 <h1>Real Detroit‑Style Square Pizza</h1>
 <p>Seasoned steel pans, caramelized edges, and warm sauce on top after the bake — just like we grew up eating in Detroit.</p>
