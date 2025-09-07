@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head><style>
+/* === Minimal critical paint === */
+:root { --bg:#0b0b0c; --text:#f4f4f5; --panel:#121214; }
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+header,nav,main,section,footer{display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin-inline:auto;padding-inline:16px}
+.hero{padding:32px 0 12px}
+h1{font-weight:800;line-height:1.1;margin:8px 0}
+img[width][height]{height:auto}
+section[data-defer]{content-visibility:auto; contain-intrinsic-size: 1px 400px;}
+</style><link href="https://www.toasttab.com" rel="preconnect"/><link href="https://order.toasttab.com" rel="preconnect"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Detroit‑Style Pizza: The Origin • Woodward Pizza</title>
-<meta content="How Detroit’s auto industry shaped the pan, the crust, and the tradition of Detroit‑style pizza." name="description"/>
-<link href="https://woodwardpizza.com/origin.html" rel="canonical"/>
+<meta content="What makes it deep dish Detroit‑style? Seasoned steel pans, caramelized frico edges, and sauce on top—learn the Motor City origin and try a square in Edmond." name="description"/>
+<link href="https://www.woodwardpizza.com/origin.html" rel="canonical"/>
 <meta content="Detroit‑Style Pizza: The Origin • Woodward Pizza" property="og:title"/>
 <meta content="How Detroit’s auto industry shaped the pan, the crust, and the tradition of Detroit‑style pizza." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://kskeego.github.io/origin.html" property="og:url"/>
+<meta content="https://www.woodwardpizza.com/origin.html" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Woodward Pizza","servesCuisine":["Pizza","Detroit-style"],"address":{"@type":"PostalAddress","addressLocality":"Edmond","addressRegion":"OK","addressCountry":"US"},"url":"https://kskeego.github.io/origin.html","sameAs":["https://www.facebook.com/WoodwardPizza/","https://www.instagram.com/woodwardpizza","https://www.google.com/maps/place/Woodward+Pizza/@35.6537661,-97.4874126,17z/data=!4m14!1m7!3m6!1s0x87b21f607a0e6ac7:0x8d3b7a164ce95900!2sWoodward+Pizza!8m2!3d35.6537618!4d-97.4848377!16s%2Fg%2F11q414tncq!3m5!1s0x87b21f607a0e6ac7:0x8d3b7a164ce95900!8m2!3d35.6537618!4d-97.4848377!16s%2Fg%2F11q414tncq?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"],"areaServed":[{"@type":"City","name":"Edmond"},{"@type":"City","name":"Oklahoma City"},{"@type":"City","name":"Arcadia"},{"@type":"City","name":"Piedmont"},{"@type":"City","name":"Deer Creek"},{"@type":"City","name":"The Village"},{"@type":"City","name":"Nichols Hills"},{"@type":"City","name":"Bethany"},{"@type":"City","name":"Moore"},{"@type":"City","name":"Yukon"},{"@type":"City","name":"Midwest City"},{"@type":"City","name":"Del City"}],"makesOffer":[{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"22:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Monday","Tuesday","Wednesday","Thursday"]},{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"23:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Friday","Saturday"]},{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"21:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Sunday"]}]}</script>
-<script data-consent="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-ZCT0NSXYQC" type="text/plain"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Woodward Pizza","servesCuisine":["Pizza","Detroit-style"],"address":{"@type":"PostalAddress","addressLocality":"Edmond","addressRegion":"OK","addressCountry":"US"},"url":"https://www.woodwardpizza.com/origin.html","sameAs":["https://www.facebook.com/WoodwardPizza/","https://www.instagram.com/woodwardpizza","https://www.google.com/maps/place/Woodward+Pizza/@35.6537661,-97.4874126,17z/data=!4m14!1m7!3m6!1s0x87b21f607a0e6ac7:0x8d3b7a164ce95900!2sWoodward+Pizza!8m2!3d35.6537618!4d-97.4848377!16s%2Fg%2F11q414tncq!3m5!1s0x87b21f607a0e6ac7:0x8d3b7a164ce95900!8m2!3d35.6537618!4d-97.4848377!16s%2Fg%2F11q414tncq?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"],"areaServed":[{"@type":"City","name":"Edmond"},{"@type":"City","name":"Oklahoma City"},{"@type":"City","name":"Arcadia"},{"@type":"City","name":"Piedmont"},{"@type":"City","name":"Deer Creek"},{"@type":"City","name":"The Village"},{"@type":"City","name":"Nichols Hills"},{"@type":"City","name":"Bethany"},{"@type":"City","name":"Moore"},{"@type":"City","name":"Yukon"},{"@type":"City","name":"Midwest City"},{"@type":"City","name":"Del City"}],"makesOffer":[{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"22:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Monday","Tuesday","Wednesday","Thursday"]},{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"23:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Friday","Saturday"]},{"@type":"Offer","availabilityStarts":"11:00","availabilityEnds":"21:00","itemOffered":{"@type":"Service","name":"Pickup & Delivery"},"eligibleDay":["Sunday"]}]}</script>
+<script data-consent="analytics" defer="defer" src="https://www.googletagmanager.com/gtag/js?id=G-ZCT0NSXYQC" type="text/plain"></script>
 <script data-consent="analytics" type="text/plain">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);} 
   gtag("js", new Date());
   gtag("config", "G-ZCT0NSXYQC");
 </script>
-<link href="/assets/css/header-transparency-fix.css" rel="stylesheet"/>
+<link href="/assets/css/header-transparency-fix.css" media="print" onload="this.media='all'" rel="stylesheet"/>
 <!-- Meta Pixel Code -->
 <script data-consent="marketing" type="text/plain">
 !function(f,b,e,v,n,t,s)
@@ -35,11 +47,31 @@ fbq('init', '1089649698467202');
 fbq('track', 'PageView');
 </script>
 <noscript>
-<img height="1" src="https://www.facebook.com/tr?id=1089649698467202&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
+<img decoding="async" fetchpriority="high" height="1" src="https://www.facebook.com/tr?id=1089649698467202&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
 </noscript>
-<!-- End Meta Pixel Code --></head>
+<!-- End Meta Pixel Code --><link as="style" href="/assets/css/header-transparency-fix.css" rel="preload"/><noscript><link href="/assets/css/header-transparency-fix.css" media="print" onload="this.media='all'" rel="stylesheet"/></noscript><link as="image" href="https://www.facebook.com/tr?id=1089649698467202&amp;ev=PageView&amp;noscript=1" rel="preload"/><link href="/assets/fonts/fonts.css" rel="stylesheet"/><link as="font" crossorigin="anonymous" href="/fonts/Inter-Variable.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="anonymous" href="/fonts/BebasNeue-Regular.woff2" rel="preload" type="font/woff2"/><link as="style" href="/assets/css/header-transparency-fix.css" rel="preload"/><noscript><link href="/assets/css/header-transparency-fix.css" rel="stylesheet"/></noscript><style>
+/* CLS guard */
+.hero{min-height:clamp(320px,45vh,560px)}
+/* Ensure media in hero preserves space before load */
+.hero img{display:block;max-width:100%;height:auto}
+/* Order bar animation via transform to avoid layout thrash */
+#order-now-bar{will-change:transform}
+</style><link as="image" href="/assets/hero-1024w.webp" rel="preload"/><style>
+/* nav/hamburger fix (late-in-head for highest priority) */
+header button.hamburger, .site-header button.hamburger{ 
+  appearance:none; -webkit-appearance:none; background:transparent!important; border:0!important; box-shadow:none!important;
+  color: var(--brand, #98001b) !important; padding:.25rem .4rem; border-radius:8px;
+}
+header .hamburger span, .site-header .hamburger span{ background: currentColor !important; display:block; height:2px; margin:5px 0; width:22px; border-radius:1px; }
+button.hamburger:focus-visible{ outline: 2px solid currentColor; outline-offset: 2px; }
+/* ensure mobile open state wins over early rules */
+@media (max-width: 900px){
+  header #site-menu.open, header .nav .nav-links.open, header .nav-links.open{ display:flex !important; }
+}
+[hidden]{ display:none !important; }
+</style></head>
 <body>
-<header id="site-header"></header>
+<header id="site-header"><button aria-label="Toggle navigation" class="hamburger" type="button"><span></span><span></span><span></span></button></header>
 <main class="container" id="main" tabindex="-1">
 <h1>The Origin of Detroit-Style Pizza</h1>
 <article aria-label="Origin of Detroit‑Style Pizza">
@@ -157,5 +189,33 @@ fbq('track', 'PageView');
       return {social_target: el.href};
     });
   })();
-</script></body>
+</script><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'));}</script><script>
+/* robust nav toggle */
+(function(){
+  var btn = document.querySelector('button.hamburger');
+  if(!btn) return;
+  var menu = null;
+  var cid = btn.getAttribute('aria-controls');
+  if(cid) menu = document.getElementById(cid);
+  if(!menu) menu = document.querySelector('header #site-menu, header .nav-links, header nav ul, header .menu, header .header-nav, header .site-nav');
+  if(!menu) return;
+
+  function setState(expanded){
+    btn.setAttribute('aria-expanded', String(expanded));
+    menu.classList.toggle('open', !!expanded);
+    if(expanded){ menu.removeAttribute('hidden'); } else { menu.setAttribute('hidden',''); }
+  }
+  setState(btn.getAttribute('aria-expanded') === 'true');
+
+  btn.addEventListener('click', function(){
+    setState(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ setState(false); btn.focus(); }
+  });
+  var desktop = window.matchMedia('(min-width: 901px)');
+  function sync(){ if(desktop.matches){ menu.removeAttribute('hidden'); menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } }
+  desktop.addEventListener('change', sync);
+  sync();
+})();</script></body>
 </html>
