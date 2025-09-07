@@ -35,17 +35,13 @@ a:hover{opacity:.95}
 .hamburger{display:none;cursor:pointer;padding:.25rem .4rem;border-radius:8px}
 .hamburger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0;transition:transform .2s ease,opacity .2s ease}
 
-.hero{
-  position:relative; min-height:62vh; display:flex; align-items:center; text-align:center;
-  
-  background-size: cover; background-position: center; background-repeat:no-repeat;
-}
-.hero .container{padding:5rem 0}
-.hero .kicker{display:inline-block;background:rgba(255,255,255,.08);border:1px solid var(--line);padding:.25rem .6rem;border-radius:999px;font-size:.85rem;color:#d8dde6}
+.hero{ position:relative; min-height:62vh; overflow:hidden; }
+.hero .container{padding:5rem 0 text-align:center;}
+.hero .kicker{display:inline-block;border:1px solid var(--line);padding:.25rem .6rem;border-radius:999px;font-size:.85rem;color:#d8dde6}
 .hero h1{font-family: "Bebas Neue","Inter",Arial,sans-serif;font-weight:800;letter-spacing:.3px;font-size:clamp(2.1rem,4vw,3.4rem);margin:.5rem 0 0 line-height:1.1;}
 .hero p{color:var(--muted);max-width:760px;margin:.8rem auto 1.2rem}
 .hero .cta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
-.hero .cta .btn.secondary{background:rgba(255,255,255,.08);border:1px solid var(--line)}
+.hero .cta .btn.secondary{border:1px solid var(--line)}
 
 .sections{padding:2.2rem 0}
 .grid{display:grid;gap:1rem}
@@ -106,23 +102,17 @@ body.orderbar-visible .site-header{top:44px}
 
 /* Responsive hero background (generated) */
 @media (max-width: 1200px){
-  .hero{
-    
-  }
+  .hero{ position:relative; min-height:62vh; overflow:hidden; }
 }
 @media (max-width: 900px){
-  .hero{
-    
-  }
+  .hero{ position:relative; min-height:62vh; overflow:hidden; }
 }
 @media (max-width: 600px){
-  .hero{
-    
-  }
+  .hero{ position:relative; min-height:62vh; overflow:hidden; }
 }
 
 /* Hero media layering and centering */
-.hero{ position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.hero{ position:relative; min-height:62vh; overflow:hidden; }
 .hero .container{ position:relative; z-index:2; text-align:center; }
 
 .hero__media{ position:absolute; inset:0; z-index:0; }
@@ -130,6 +120,6 @@ body.orderbar-visible .site-header{top:44px}
 .hero__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 
 .hero__overlay{ position:absolute; inset:0; z-index:1;
-  background: linear-gradient(180deg, rgba(10,11,14,.55), rgba(10,11,14,.75));
+  
   pointer-events:none;
 }
