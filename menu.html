@@ -69,6 +69,19 @@ button.hamburger:focus-visible{ outline: 2px solid currentColor; outline-offset:
   header #site-menu.open, header .nav .nav-links.open, header .nav-links.open{ display:flex !important; }
 }
 [hidden]{ display:none !important; }
+</style><style>
+/* header init visibility */
+header button.hamburger{appearance:none;-webkit-appearance:none;background:transparent!important;border:0!important;color:var(--brand,#98001b)!important;padding:.25rem .4rem;border-radius:8px}
+header .hamburger span{display:block;height:2px;margin:5px 0;width:22px;border-radius:1px;background:currentColor!important}
+button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (min-width:901px){
+  header #site-menu, header .nav .nav-links{display:flex !important}
+}
+@media (max-width:900px){
+  header #site-menu:not(.open), header .nav .nav-links:not(.open){display:none !important}
+  header #site-menu.open, header .nav .nav-links.open{display:flex !important}
+}
+[hidden]{display:none !important}
 </style></head><body><a class="skip-link" href="#main">Skip to main content</a><div aria-label="Quick order bar" class="orderbar" id="order-now-bar" role="region"><div class="inner"><strong>Hungry?</strong><a aria-label="Order Woodward Pizza now" class="btn" href="https://order.toasttab.com/online/woodwardpizza?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=order_online" rel="noopener" target="_blank">Order Now</a></div></div><header class="site-header" role="banner">
 <div class="container nav">
 <a class="logo" href="/"><picture><source srcset="/assets/logo.png.webp" type="image/webp"/><img alt="Woodward Pizza logo" decoding="async" fetchpriority="high" height="60" src="/assets/logo.png" width="220"/></picture></a>
@@ -201,14 +214,14 @@ button.hamburger:focus-visible{ outline: 2px solid currentColor; outline-offset:
     });
   })();
 </script><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'));}</script><script>
-/* robust nav toggle */
+/* robust nav toggle v2 */
 (function(){
   var btn = document.querySelector('button.hamburger');
   if(!btn) return;
   var menu = null;
   var cid = btn.getAttribute('aria-controls');
   if(cid) menu = document.getElementById(cid);
-  if(!menu) menu = document.querySelector('header #site-menu, header .nav-links, header nav ul, header .menu, header .header-nav, header .site-nav');
+  if(!menu) menu = document.querySelector('header #site-menu, header .nav .nav-links, header nav ul, header .menu, header .header-nav, header .site-nav');
   if(!menu) return;
 
   function setState(expanded){
@@ -216,16 +229,22 @@ button.hamburger:focus-visible{ outline: 2px solid currentColor; outline-offset:
     menu.classList.toggle('open', !!expanded);
     if(expanded){ menu.removeAttribute('hidden'); } else { menu.setAttribute('hidden',''); }
   }
-  setState(btn.getAttribute('aria-expanded') === 'true');
 
+  var desktop = window.matchMedia('(min-width: 901px)');
+  function applyInitial(){
+    if(desktop.matches){
+      menu.removeAttribute('hidden'); menu.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    }else{
+      setState(btn.getAttribute('aria-expanded') === 'true');
+    }
+  }
+
+  applyInitial();
   btn.addEventListener('click', function(){
     setState(btn.getAttribute('aria-expanded') !== 'true');
   });
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape'){ setState(false); btn.focus(); }
   });
-  var desktop = window.matchMedia('(min-width: 901px)');
-  function sync(){ if(desktop.matches){ menu.removeAttribute('hidden'); menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } }
-  desktop.addEventListener('change', sync);
-  sync();
+  desktop.addEventListener('change', applyInitial);
 })();</script></body></html><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Menu", "name": "Woodward Pizza Menu", "hasMenuSection": [{"@type": "MenuSection", "name": "Detroit-Style Square Pizzas", "hasMenuItem": [{"@type": "MenuItem", "name": "Pizza of the Month", "description": "Rotates monthly \u2014 see in-store or online ordering for current special."}, {"@type": "MenuItem", "name": "Detroiter Pepperoni", "description": "Natural casing pepperoni, mozzarella, seasoned ricotta, basil, Pecorino Romano, signature red sauce."}, {"@type": "MenuItem", "name": "Trippple XXXtra Pepperoni", "description": "Extra mozzarella and a heap of natural casing pepperoni with signature red sauce."}, {"@type": "MenuItem", "name": "Spicy Hawaiian", "description": "Ham, pineapple, bacon, jalape\u00f1os, red sauce, hot honey."}, {"@type": "MenuItem", "name": "Veggie", "description": "Mushroom, red onion, red bell pepper, black olive, tomato, fresh basil, red sauce."}, {"@type": "MenuItem", "name": "Vegan Buffalo Not Chicken", "description": "Vegan mozzarella, plant\u2011based not\u2011chicken, red onion, vegan ranch + buffalo (no red sauce)."}, {"@type": "MenuItem", "name": "White Pizza", "description": "Mozzarella, garlic oil, chicken, spinach, red pepper, ricotta, alfredo (no red sauce)."}, {"@type": "MenuItem", "name": "PBR (Pickle Bacon Ranch)", "description": "No red sauce \u2014 mozzarella, garlic oil, pickles, bacon, ranch."}, {"@type": "MenuItem", "name": "Sausage Supreme", "description": "Mozzarella, garlic oil, Italian sausage, seasoned ricotta, red peppers, red onion, red sauce."}, {"@type": "MenuItem", "name": "Spicy Dad Bod", "description": "Mozzarella, natural casing pepperoni, seasoned ricotta, Italian sausage, garlic oil, spicy vodka sauce."}]}, {"@type": "MenuSection", "name": "Dessert", "hasMenuItem": [{"@type": "MenuItem", "name": "Cinnamon Sticks", "description": "With house\u2011made orange icing (GF available)."}, {"@type": "MenuItem", "name": "Cannoli", "description": "Hand\u2011filled cannoli cream with mini chocolate chips."}]}]}</script>
