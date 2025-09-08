@@ -111,7 +111,7 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 </nav>
 </div>
 </header>
-<div class="hero"><div aria-hidden="true" class="hero__media"><picture><source sizes="(max-width:600px) 92vw, (max-width:1024px) 95vw, 100vw" srcset="/assets/hero-420w.webp 420w, /assets/hero-560w.webp 560w, /assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" type="image/webp"/><img alt="" decoding="async" fetchpriority="high" height="900" sizes="(max-width:600px) 92vw, (max-width:1024px) 95vw, 100vw" src="/assets/hero-1024w.jpg" srcset="/assets/hero-420w.jpg 420w, /assets/hero-560w.jpg 560w, /assets/hero-768w.jpg 768w, /assets/hero-1024w.jpg 1024w, /assets/hero-1440w.jpg 1440w, /assets/hero-1920w.jpg 1920w" width="1920"/></picture><div class="hero__overlay"></div></div><div class="container">
+<div class="hero"><div aria-hidden="true" class="hero__media"><picture><source sizes="(max-width:600px) 92vw, (max-width:1024px) 95vw, 100vw" srcset="/assets/hero-420w.webp 420w, /assets/hero-560w.webp 560w, /assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" type="image/webp"/><img alt="" decoding="async" fetchpriority="high" height="900" sizes="(max-width:600px) 92vw, (max-width:1024px) 95vw, 100vw" src="/assets/hero-1024w.jpg" srcset="/assets/hero-420w.jpg 420w, /assets/hero-560w.jpg 560w, /assets/hero-768w.jpg 768w, /assets/hero-1024w.jpg 1024w, /assets/hero-1440w.jpg 1440w, /assets/hero-1920w.jpg 1920w" style="object-fit:cover; width:100%; height:100%; object-position:50% 100% !important;" width="1920"/></picture><div class="hero__overlay"></div></div><div class="container">
 <span class="kicker">Edmond • OKC Metro • Icehouse Project</span>
 <h1>Real Detroit‑Style Square Pizza</h1>
 <p>Seasoned steel pans, caramelized edges, and warm sauce on top after the bake — just like we grew up eating in Detroit.</p>
@@ -155,14 +155,16 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 .footer-nap a{text-decoration:underline}
 .footer-nap p{margin:.2rem 0}
 
-/* Stronger bottom anchoring and spacing fixes */
-.hero__media img{ object-position: 62% 100% !important; }   /* nudge X toward pizza, keep bottom */
-@media (min-width: 1400px){ .hero__media img{ object-position: 66% 100% !important; } }
-@media (max-width: 600px){ .hero__media img{ object-position: 52% 92% !important; } }
-
-/* Remove stray gap below hero without affecting CLS */
-.hero{ margin-bottom: 0 !important; padding-bottom: 0 !important; }
-.hero + section, .hero + div{ margin-top: min(1.2rem, 2vh) !important; }
+/* Wider viewport height so bottom stays in frame */
+@media (min-width: 1200px){
+  .hero{ min-height: clamp(560px, 68svh, 82svh) !important; }
+}
+@media (min-width: 1600px){
+  .hero{ min-height: clamp(620px, 72svh, 88svh) !important; }
+}
+/* Keep near-zero gap below hero */
+.hero{ margin-bottom:0 !important; padding-bottom:0 !important; }
+.hero + section, .hero + div{ margin-top:min(1.2rem,2vh) !important; }
 </style></footer><script src="/assets/js/consent-unifier.js"></script>
 <!-- GA4 events (consent-aware) -->
 <script data-consent="analytics" type="text/plain">
