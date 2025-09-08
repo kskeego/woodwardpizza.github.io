@@ -154,6 +154,15 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 .footer-nap{margin-top:2rem;font-size:0.95rem;line-height:1.5}
 .footer-nap a{text-decoration:underline}
 .footer-nap p{margin:.2rem 0}
+
+/* Stronger bottom anchoring and spacing fixes */
+.hero__media img{ object-position: 62% 100% !important; }   /* nudge X toward pizza, keep bottom */
+@media (min-width: 1400px){ .hero__media img{ object-position: 66% 100% !important; } }
+@media (max-width: 600px){ .hero__media img{ object-position: 52% 92% !important; } }
+
+/* Remove stray gap below hero without affecting CLS */
+.hero{ margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.hero + section, .hero + div{ margin-top: min(1.2rem, 2vh) !important; }
 </style></footer><script src="/assets/js/consent-unifier.js"></script>
 <!-- GA4 events (consent-aware) -->
 <script data-consent="analytics" type="text/plain">
