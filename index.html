@@ -83,39 +83,32 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 }
 [hidden]{display:none !important}
 </style><style>
-/* Hard override: single-source hero image + centered content + pizza-focused crop */
-.hero, .hero::before, .hero::after {
-  background: none !important;
-  background-image: none !important;
+/* Force single-source hero and bottom-center focus; avoid blank space on mobile */
+.hero, .hero::before, .hero::after { background: none !important; background-image: none !important; }
+
+.hero { position: relative; overflow: hidden; /* height tuned for mobile with stable svh */
+  min-height: clamp(460px, 56svh, 72svh);
+  display: block !important;
 }
-.hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 62vh;
-  display: block !important; /* defeat stray flex/grid */
-}
+
 .hero__media { position: absolute; inset: 0; z-index: 0; }
-.hero__media picture,
-.hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Pizza focus crop */
-.hero__media img{ object-position: 65% 78%; }
-@media (min-width: 1200px){ .hero__media img{ object-position: 70% 84%; } }
-@media (min-width: 1600px){ .hero__media img{ object-position: 74% 88%; } }
-@media (max-width: 600px){ .hero__media img{ object-position: 54% 48%; } }
-.hero__overlay {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg, rgba(10,11,14,.55), rgba(10,11,14,.75));
-  pointer-events: none;
-}
-.hero .container {
-  position: relative; z-index: 2;
-  margin: 0 auto;
-  text-align: center;
-}
-.hero h1 { line-height: 1.1; }
+.hero__media picture, .hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Bottom-center pizza focus */
+.hero__media img { object-position: 50% 92%; }
+@media (min-width: 1200px){ .hero__media img{ object-position: 50% 96%; } }
+@media (min-width: 1600px){ .hero__media img{ object-position: 50% 98%; } }
+@media (max-width: 600px){ .hero__media img{ object-position: 50% 86%; } }
+
+.hero__overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,11,14,.55), rgba(10,11,14,.75)); pointer-events: none; }
+.hero .container { position: relative; z-index: 2; margin: 0 auto; text-align: center; }
+.hero h1{ line-height: 1.1; }
+
+/* Optional: nip any extra bottom margin from hero to avoid perceived blank gap */
+.hero{ margin-bottom: 0; }
 </style></head><body><a class="skip-link" href="#main">Skip to main content</a><div aria-label="Quick order bar" class="orderbar" id="order-now-bar" role="region"><div class="inner"><strong>Hungry?</strong><a aria-label="Order Woodward Pizza now" class="btn" href="https://order.toasttab.com/online/woodwardpizza?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=order_online" rel="noopener" target="_blank">Order Now</a></div></div><header class="site-header" role="banner">
 <div class="container nav">
-<a class="logo" href="/"><picture><source srcset="/assets/logo.png.webp" type="image/webp"/><img alt="Woodward Pizza logo" decoding="async" fetchpriority="high" height="60" src="/assets/logo.png" width="220"/></picture></a>
+<a class="logo" href="/"><picture><source srcset="/assets/logo.png.webp" type="image/webp"/><img alt="Woodward Pizza logo" decoding="async" fetchpriority="high" height="60" sizes="(max-width: 600px) 220px, 240px" src="/assets/logo.png" srcset="/assets/logo-240w.webp 240w, /assets/logo.png 1200w" width="220"/></picture></a>
 <a aria-label="Order Woodward Pizza online" class="btn order-now-mobile" href="https://order.toasttab.com/online/woodwardpizza?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=order_online" rel="noopener" target="_blank">Order Now</a>
 <input aria-expanded="false" aria-label="Open menu" id="nav-toggle" role="switch" type="checkbox"/>
 <button aria-controls="site-menu" aria-expanded="false" aria-haspopup="menu" aria-label="Toggle navigation" class="hamburger" type="button"><span></span><span></span><span></span></button>
@@ -132,12 +125,7 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
 </nav>
 </div>
 </header>
-<div class="hero"><div aria-hidden="true" class="hero__media">
-<picture>
-<source sizes="100vw" srcset="/assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" type="image/webp"/>
-<img alt="" decoding="async" fetchpriority="high" height="900" sizes="100vw" src="/assets/hero-1024w.jpg" srcset="/assets/hero-768w.jpg 768w, /assets/hero-1024w.jpg 1024w, /assets/hero-1440w.jpg 1440w, /assets/hero-1920w.jpg 1920w" width="1920"/>
-</picture>
-<div class="hero__overlay"></div></div><div class="container">
+<div class="hero"><div aria-hidden="true" class="hero__media"><picture><source sizes="100vw" srcset="/assets/hero-420w.webp 420w, /assets/hero-560w.webp 560w, /assets/hero-768w.webp 768w, /assets/hero-1024w.webp 1024w, /assets/hero-1440w.webp 1440w, /assets/hero-1920w.webp 1920w" type="image/webp"/><img alt="" decoding="async" fetchpriority="high" height="900" sizes="100vw" src="/assets/hero-1024w.jpg" srcset="/assets/hero-420w.jpg 420w, /assets/hero-560w.jpg 560w, /assets/hero-768w.jpg 768w, /assets/hero-1024w.jpg 1024w, /assets/hero-1440w.jpg 1440w, /assets/hero-1920w.jpg 1920w" width="1920"/></picture><div class="hero__overlay"></div></div><div class="container">
 <span class="kicker">Edmond • OKC Metro • Icehouse Project</span>
 <h1>Real Detroit‑Style Square Pizza</h1>
 <p>Seasoned steel pans, caramelized edges, and warm sauce on top after the bake — just like we grew up eating in Detroit.</p>
