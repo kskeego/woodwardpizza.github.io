@@ -1,62 +1,25 @@
-/* LCP-safe, no forced reflow */
+/* LCP/CLS safe script: no forced reflow */
 (() => {
   const header = document.querySelector('header');
   const hero = document.querySelector('.hero');
+
+  // Toggle header class without layout thrash
   if (header && hero && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(([e]) => {
       header.classList.toggle('is-scrolled', !e.isIntersecting);
     }, { rootMargin: '-80px 0px 0px 0px', threshold: 0 });
     io.observe(hero);
   }
+
+  // Any scroll effects go through rAF and passive listeners
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(() => {
-      const y = window.scrollY;
-      if (header) header.classList.toggle('condensed', y > 10);
+      const y = window.scrollY; // one READ
+      if (header) header.classList.toggle('condensed', y > 10); // WRITE
       ticking = false;
     });
   }, { passive: true });
 })();
-
-/* legacy kept: */
-document.addEventListener('DOMContentLoaded', function(){
-  const menuBtn = document.querySelector('button.hamburger[aria-controls]');
-  const menu = menuBtn ? document.getElementById(menuBtn.getAttribute('aria-controls')) : null;
-  const bar = document.getElementById('order-now-bar');
-
-  function setMenu(expanded){
-    if(!menuBtn || !menu) return;
-    menuBtn.setAttribute('aria-expanded', String(expanded));
-    if(expanded){ menu.removeAttribute('hidden'); } else { menu.setAttribute('hidden',''); }
-  }
-  if(menuBtn){
-    setMenu(menuBtn.getAttribute('aria-expanded') === 'true');
-    menuBtn.addEventListener('click', ()=> setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape'){ setMenu(false); menuBtn.focus(); } });
-  }
-
-  // rAF-throttled scroll handler to avoid forced reflow
-  let lastY = 0, ticking = false, state = false;
-  const mql = window.matchMedia('(max-width: 900px)');
-  function updateBar(){
-    const show = mql.matches && lastY > 120;
-    if(bar && show !== state){
-      state = show;
-      if(show){ bar.classList.add('show'); document.body.classList.add('orderbar-visible'); }
-      else{ bar.classList.remove('show'); document.body.classList.remove('orderbar-visible'); }
-    }
-    ticking = false;
-  }
-  function onScroll(){
-    lastY = window.scrollY || window.pageYOffset;
-    if(!ticking){
-      window.requestAnimationFrame(updateBar);
-      ticking = true;
-    }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', ()=> { lastY = window.scrollY || 0; onScroll(); });
-  onScroll();
-});
