@@ -1,3 +1,26 @@
+/* LCP-safe, no forced reflow */
+(() => {
+  const header = document.querySelector('header');
+  const hero = document.querySelector('.hero');
+  if (header && hero && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(([e]) => {
+      header.classList.toggle('is-scrolled', !e.isIntersecting);
+    }, { rootMargin: '-80px 0px 0px 0px', threshold: 0 });
+    io.observe(hero);
+  }
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (header) header.classList.toggle('condensed', y > 10);
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+
+/* legacy kept: */
 document.addEventListener('DOMContentLoaded', function(){
   const menuBtn = document.querySelector('button.hamburger[aria-controls]');
   const menu = menuBtn ? document.getElementById(menuBtn.getAttribute('aria-controls')) : null;
