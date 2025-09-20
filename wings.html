@@ -13,7 +13,7 @@ section[data-defer]{content-visibility:auto; contain-intrinsic-size: 1px 400px;}
 </style><link href="https://www.toasttab.com" rel="preconnect"/><link href="https://order.toasttab.com" rel="preconnect"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Smoked Wings | Detroit Style Deep Dish Pizza in Edmond OK – Woodward Pizza at Icehouse Project</title>
+<title>Smoked Wings | Detroit Style Deep Dish Pizza in Edmond OK – Woodward Pizza</title>
 <meta content="Born in Detroit, baked in Edmond. Discover our story, seasoned steel pans, and why deep dish Detroit‑style, frico‑edged, sauce‑on‑top squares are the heart of Woodward Pizza." name="description"/>
 <link href="https://www.woodwardpizza.com/about.html" rel="canonical"/>
 <meta content="About • Woodward Pizza" property="og:title"/>
@@ -79,52 +79,74 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
   header #site-menu.open, header .nav .nav-links.open{display:flex !important}
 }
 [hidden]{display:none !important}
-</style><meta name="description" content="Smoked then finished crisp. Order the best wings in Edmond with your Detroit Style Deep Dish Pizza at Woodward Pizza. Sauces, combos, and lunch options.">
-</head><body><header id="site-header"><button aria-label="Toggle navigation" class="hamburger" type="button"><span></span><span></span><span></span></button></header><main class="container" id="main" tabindex="-1"><div class="container"><section class="hero"><h1>Smoked Wings in Edmond</h1><p class="small">Smoked low & slow, finished crisp. Perfect with Detroit Style Deep Dish Pizza.</p><div class="hstack"><a class="btn" href="https://order.toasttab.com/online/woodwardpizza">Order Online</a><a class="btn" href="/contact.html">Hours & Directions</a></div></section></div>
-<div class="container"><div class="grid">
-  <div class="card"><h2>Why you’ll love them</h2><ul class="list"><li>Smoked for depth of flavor</li><li>Crispy finish for perfect bite</li><li>House sauces & rotating flavors</li></ul></div>
-  <div class="card"><h2>Quick order</h2><p>Head to the <a href="https://order.toasttab.com/online/woodwardpizza">menu</a> to order wings with your favorite square pizza.</p></div>
-</div></div>
-<!-- GA4 base -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCT0NSXYQC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZCT0NSXYQC');
-</script>
+</style><meta name="description" content="Smoked low & slow, finished crisp. Perfect with Detroit Style Deep Dish Pizza.">
+</head><body><header id="site-header"></header>
+<main class="container sections" id="main" tabindex="-1">
+  <h1>Smoked Wings</h1>
+  <section class="container sections">
+    <div class="card">
+      <p>Smoked low & slow, finished crisp. Perfect with Detroit Style Deep Dish Pizza.</p>
+      <p><a class="btn" href="https://order.toasttab.com/online/woodwardpizza">Order Online</a> <a class="btn" href="/contact.html">Hours &amp; Directions</a></p>
+    </div>
+  </section>
+  <section class="container sections grid cols-2">
+  <div class="card">
+    <h2>Why we’re worth the drive</h2>
+    <ul>
+      <li>Crispy frico edges, airy crumb</li>
+      <li>Smoked wings &amp; full bar</li>
+      <li>Patio at the Icehouse Project</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Quick links</h2>
+    <p><a href="https://order.toasttab.com/online/woodwardpizza">Order Online</a> &bull; <a href="/contact.html">Hours &amp; Directions</a> &bull; <a href="/faq.html">FAQ</a></p>
+  </div>
+</section>
+
+<section class="container sections grid cols-2">
+  <div class="card">
+    <h3>Hours</h3>
+    <ul>
+      <li>Sun: 11:00 am – 9:00 pm</li>
+      <li>Mon–Thu: 11:00 am – 10:00 pm</li>
+      <li>Fri–Sat: 11:00 am – 11:00 pm</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Connect</h3>
+    <p><a href="https://order.toasttab.com/online/woodwardpizza">Order Online</a><br>
+    <a href="https://app.toasttab.com/woodwardpizza/rewards_signup" target="_blank" rel="noopener">Rewards Signup</a><br>
+    <a href="https://app.toasttab.com/woodwardpizza/giftcards" target="_blank" rel="noopener">Purchase Gift Cards</a><br>
+    <a href="tel:+14057574992">(405) 757-4992</a></p>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
 <script>
 (function() {
   function label() {
     try { var h1 = document.querySelector('h1'); return (h1 && h1.textContent.trim()) || document.title || 'unknown'; }
     catch (e) { return 'unknown'; }
   }
-  function onClick(selector, eventName) {
+  function onClick(selector, eventName, category) {
     var els = document.querySelectorAll(selector);
     for (var i=0;i<els.length;i++) {
       els[i].addEventListener('click', function() {
-        try { gtag('event', eventName, { event_category: 'engagement', event_label: label(), value: 1 }); } catch(e){}
+        try { gtag('event', eventName, { event_category: category, event_label: label(), value: 1 }); } catch(e){}
       });
     }
   }
   function init() {
-    onClick('a[href*="/menu.html"]', 'order_click');
-    onClick('a[href^="tel:"]', 'call_click');
-    onClick('a[href$="/contact.html"]', 'hours_click');
-    onClick('a[href*="toasttab.com"]', 'toast_order_click');
+    onClick('a[href*="/menu.html"]', 'order_click', 'engagement');
+    onClick('a[href^="tel:"]', 'call_click', 'engagement');
+    onClick('a[href$="/contact.html"]', 'hours_click', 'engagement');
+    onClick('a[href*="toasttab.com"]', 'toast_order_click', 'conversion');
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  if (typeof gtag === 'function') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  }
 })();
 </script>
-</main><footer id="site-footer"><div class="container footer-grid"><div><h3>Hours</h3><ul class="hours">
-<li>Sun: 11:00 am – 9:00 pm</li>
-<li>Mon–Thu: 11:00 am – 10:00 pm</li>
-<li>Fri–Sat: 11:00 am – 11:00 pm</li>
-</ul></div><div><h3>Connect</h3><p><a href="https://order.toasttab.com/online/woodwardpizza?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=order_online" rel="noopener" target="_blank">Order Online</a><br/>
-<a href="https://www.toasttab.com/woodwardpizza/rewardsSignup?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=rewards_signup" rel="noopener" target="_blank">Rewards Signup</a><br/>
-<a href="https://www.toasttab.com/woodwardpizza/giftcards?utm_source=website&amp;utm_medium=cta&amp;utm_campaign=giftcards_purchase" rel="noopener" target="_blank">Purchase Gift Cards</a></p></div><div class="footer-contact"><a aria-label="Call Woodward Pizza at 405-757-4992" class="footer-phone" href="tel:+14057574992">(405) 757-4992</a></div></div>
-<style>
-.footer-nap{margin-top:2rem;font-size:0.95rem;line-height:1.5}
-.footer-nap a{text-decoration:underline}
-.footer-nap p{margin:.2rem 0}
-</style></footer></body></html>
+</body></html>
