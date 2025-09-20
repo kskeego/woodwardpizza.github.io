@@ -16,8 +16,8 @@ section[data-defer]{content-visibility:auto; contain-intrinsic-size: 1px 400px;}
 </style><link href="https://www.toasttab.com" rel="preconnect"/><link href="https://order.toasttab.com" rel="preconnect"/>
 <meta content="noindex, nofollow" name="robots"/><meta content="noindex, nofollow" name="googlebot"/><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Please Select Your Table Number | Detroit Style Deep Dish Pizza in Edmond OK – Woodward Pizza at Icehouse Project</title>
-
+<title>Woodward Pizza — Table Selector</title>
+<meta content="Choose your Woodward Pizza table number to start ordering." name="description"/>
 <style>
     :root{
       --bg:#0b0b0c;--panel:#121214;--text:#f4f4f5;--muted:#cfcfd6;
@@ -78,7 +78,7 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
   header #site-menu.open, header .nav .nav-links.open{display:flex !important}
 }
 [hidden]{display:none !important}
-</style><meta content="Select your table number and enjoy Detroit Style Deep Dish Pizza at Woodward Pizza in Edmond OK, located at the Icehouse Project." name="description"/></head>
+</style></head>
 <body>
 <main class="container">
 <div class="hero">
@@ -160,5 +160,46 @@ button.hamburger:focus-visible{outline:2px solid currentColor;outline-offset:2px
     if(e.key === 'Escape'){ setState(false); btn.focus(); }
   });
   desktop.addEventListener('change', applyInitial);
-})();</script></body>
+})();</script><!-- GA4 base -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCT0NSXYQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCT0NSXYQC');
+</script>
+<script>
+(function() {
+  function label() {
+    try {
+      var h1 = document.querySelector('h1');
+      return (h1 && h1.textContent.trim()) || document.title || 'unknown';
+    } catch (e) { return 'unknown'; }
+  }
+  function onClick(selector, eventName) {
+    var els = document.querySelectorAll(selector);
+    for (var i=0;i<els.length;i++) {
+      els[i].addEventListener('click', function() {
+        try { gtag('event', eventName, {
+          event_category: 'engagement',
+          event_label: label(),
+          value: 1
+        }); } catch(e){}
+      });
+    }
+  }
+  function init() {
+    onClick('a[href*="/menu.html"]', 'order_click');
+    onClick('a[href^="tel:"]', 'call_click');
+    onClick('a[href$="/contact.html"]', 'hours_click');
+    onClick('a[href*="toasttab.com"]', 'toast_order_click');
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
 </html>

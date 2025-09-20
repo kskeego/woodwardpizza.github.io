@@ -1,11 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.woodwardpizza.com/</loc></url>
-<url><loc>https://www.woodwardpizza.com/menu.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/about.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/dietary.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/areas.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/origin.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/faq.html</loc></url>
-<url><loc>https://www.woodwardpizza.com/contact.html</loc></url>
+<url><loc>https://www.woodwardpizza.com/wings.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/bar.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/gelato.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/lunch.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/catering.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-nichols-hills.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-deer-creek.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-north-okc.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-arcadia.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-piedmont.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/areas-downtown-okc.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.woodwardpizza.com/pbr-pickle-bacon-ranch.html</loc><lastmod>2025-09-20</lastmod><priority>0.8</priority></url>
 </urlset>
